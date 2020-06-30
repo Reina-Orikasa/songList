@@ -5,4 +5,10 @@ body {
 
 .navbar {
   border-bottom: skyblue 3px solid;
+  opacity: 0.8;
+}
+
+#animeSongs p,
+#nonAnimeSongs p {
+  margin-bottom: 50px;
 }

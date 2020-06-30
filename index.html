@@ -13,8 +13,11 @@
     <title>Stuff I Listen To</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-5 fixed-top">
+  <body data-spy="scroll" data-target="#main-nav" id="onRepeat">
+    <nav
+      class="navbar navbar-expand-sm bg-dark navbar-dark mb-5 fixed-top"
+      id="main-nav"
+    >
       <div class="container">
         <a
           href="https://myanimelist.net/profile/Reina_Orikasa"
@@ -33,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="#Top" class="nav-link">On Repeat</a>
+              <a href="#onRepeat" class="nav-link">On Repeat</a>
             </li>
 
             <li class="nav-item">
@@ -64,8 +67,7 @@
     <div class="currently-on-repeat pb-4">
       <div class="text-center mb-3 container">
         <h4 class="mt-5 mb-4">
-          Currently on Repeat (<span id="month"></span> /
-          <span id="year"></span>)
+          Currently on Repeat (<span id="month"></span> <span id="year"></span>)
         </h4>
 
         <img src=https://st.cdjapan.co.jp/pictures/l/03/19/LACM-14261.jpg
@@ -73,7 +75,7 @@
         Cover">
 
         <p class="mb-1 mt-3">
-          ChouCho - Natsu no Hi to Kimi no Koe
+          ChouCho - "Natsu no Hi to Kimi no Koe"
         </p>
 
         <p><span class="font-italic"> Glasslip's</span> Opening Theme</p>
@@ -86,8 +88,9 @@
           <div class="col text-center py-5">
             <h1 class="display-4">Remember</h1>
             <p class="lead">
-              Everyone likes different music. We may not agree on what is good
-              and what isn't. Listen to what you enjoy.
+              Everyone is different. We may not agree on what is good and what
+              isn't. <br />
+              Listen to what you enjoy and let others do the same.
             </p>
           </div>
         </div>
@@ -103,23 +106,23 @@
           <div class="col-md-6">
             <p>
               M·A·O - "Aozora Morning Glory" <br />
-              One Room Second Season's 1st Ending Theme
+              <i>One Room Second Season's</i> 1st Ending Theme
             </p>
             <p>
               Otome Shintō - "2 Gakki Debut Daisakusen!!" <br />
-              Kitakubu Katsudou Kiroku's Opening Theme
+              <i>Kitakubu Katsudou Kiroku's</i> Opening Theme
             </p>
             <p>
               fhána - "Itsuka no, Ikutsuka no Kimi to no Sekai" <br />
-              Bokura wa Minna Kawai-sou's Opening Theme
+              <i>Bokura wa Minna Kawai-sou's</i> Opening Theme
             </p>
             <p>
               7!! (セブンウップス) - "Bye Bye" <br />
-              Kimi to Boku's Opening Theme
+              <i>Kimi to Boku's</i> Opening Theme
             </p>
             <p>
               Yuu Serizawa - "Houkago Traveler" <br />
-              Ueno-san wa Bukiyou's 3rd Ending Theme
+              <i>Ueno-san wa Bukiyou's</i> 3rd Ending Theme
             </p>
           </div>
         </div>
@@ -159,8 +162,8 @@
     </section>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
 
@@ -176,8 +179,52 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $('#month').text(new Date().getMonth() + 1);
+      // Get month and year
+      var monthNames = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+
+      var d = new Date();
+
+      $('#month').text(monthNames[d.getMonth()]);
       $('#year').text(new Date().getFullYear());
+
+      $('body').scrollspy({ target: '#main-nav' });
+
+      // Smooth Scrolling
+      $('#main-nav a').on('click', function (e) {
+        // Check for a hash value
+        if (this.hash !== '') {
+          // Prevent default behavior
+          e.preventDefault();
+
+          // Store hash
+          const hash = this.hash;
+
+          // Animate smooth scroll
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            900,
+            function () {
+              // Add hash to URL after scroll
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
     </script>
   </body>
 </html>
