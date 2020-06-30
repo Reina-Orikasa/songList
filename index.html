@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Stuff I Listen To</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-5 fixed-top">
+      <div class="container">
+        <a
+          href="https://myanimelist.net/profile/Reina_Orikasa"
+          class="navbar-brand"
+          target="_blank"
+          >Reina Orikasa's Whimsical MAL
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#Top" class="nav-link">On Repeat</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#animeSongs" class="nav-link"
+                >Anime Opening and Endings</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#nonAnimeSongs" class="nav-link">Other Music</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="https://github.com/Reina-Orikasa/songList"
+                class="nav-link"
+                target="_blank"
+                >GitHub Page</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <div class="currently-on-repeat pb-4">
+      <div class="text-center mb-3 container">
+        <h4 class="mt-5 mb-4">
+          Currently on Repeat (<span id="month"></span> /
+          <span id="year"></span>)
+        </h4>
+
+        <img src=https://st.cdjapan.co.jp/pictures/l/03/19/LACM-14261.jpg
+        class="img-fluid rounded img-thumbnail" alt="Natsu no Hi to Kimi no Koe
+        Cover">
+
+        <p class="mb-1 mt-3">
+          ChouCho - Natsu no Hi to Kimi no Koe
+        </p>
+
+        <p><span class="font-italic"> Glasslip's</span> Opening Theme</p>
+      </div>
+    </div>
+
+    <section id="reminder" class="bg-light text-muted py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-5">
+            <h1 class="display-4">Remember</h1>
+            <p class="lead">
+              Everyone likes different music. We may not agree on what is good
+              and what isn't. Listen to what you enjoy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="animeSongs" class="bg-primary">
+      <div class="container py-4">
+        <h3 class="text-center my-4">Anime Opening and Ending Themes</h3>
+        <div class="row">
+          <div class="col-md-6"></div>
+
+          <div class="col-md-6">
+            <p>
+              M·A·O - "Aozora Morning Glory" <br />
+              One Room Second Season's 1st Ending Theme
+            </p>
+            <p>
+              Otome Shintō - "2 Gakki Debut Daisakusen!!" <br />
+              Kitakubu Katsudou Kiroku's Opening Theme
+            </p>
+            <p>
+              fhána - "Itsuka no, Ikutsuka no Kimi to no Sekai" <br />
+              Bokura wa Minna Kawai-sou's Opening Theme
+            </p>
+            <p>
+              7!! (セブンウップス) - "Bye Bye" <br />
+              Kimi to Boku's Opening Theme
+            </p>
+            <p>
+              Yuu Serizawa - "Houkago Traveler" <br />
+              Ueno-san wa Bukiyou's 3rd Ending Theme
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nonAnimeSongs" class="bg-secondary">
+      <div class="container py-4">
+        <h3 class="display-5 text-center my-4">Other Songs</h3>
+        <div class="row">
+          <div class="col-md-6"></div>
+
+          <div class="col-md-6">
+            <p>
+              Hall and Oates - "Out of Touch" <br />
+              <i>Big Bam Boom</i>
+            </p>
+            <p>
+              Animal Kingdom - "Strange Attractor" <br />
+              <i>Strange Attractor Single</i>
+            </p>
+            <p>
+              Miami Horror - "All It Ever Was" <br />
+              <i>All Possible Futures</i>
+            </p>
+            <p>
+              Imagine Dragons - "Selene" <br />
+              <i>Night Visions (Deluxe)</i>
+            </p>
+            <p>
+              U2 - "One" <br />
+              <i>Achtung Baby</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('#month').text(new Date().getMonth() + 1);
+      $('#year').text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
