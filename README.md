@@ -1,6 +1,6 @@
 # A Simple Site for Stuff I Listen to
 
-# # How to Use
+# How to Use
 Clone the files and open them in whatever text editor you prefer. 
 I personally use Visual Studio Code (VSCode) with the "Live Server" extension as it launches a server and automatically reloads the site every time you save.
 
