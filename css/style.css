@@ -4,11 +4,41 @@ body {
 }
 
 .navbar {
-  border-bottom: skyblue 3px solid;
-  opacity: 0.8;
+  opacity: 0.9;
+  box-shadow: 2px 2px 5px skyblue;
+}
+
+.nav-item {
+  font-size: 1.1rem;
+  padding-right: 1.1rem;
 }
 
 #animeSongs p,
 #nonAnimeSongs p {
   margin-bottom: 50px;
+}
+
+#animeSongs {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../img/jezael-melgoza-layMbSJ3YOE-unsplash.jpg);
+  min-height: 600px;
+  color: black;
+}
+
+#animeSongs .card:hover {
+  background: #3292a6;
+  color: #fff;
+}
+
+#header {
+  position: relative;
+  background: url(../img/yucar-fotografik-cfR-V1QuEKw-unsplash.jpg);
+  min-height: 600px;
+  color: black;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
 }
