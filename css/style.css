@@ -67,6 +67,10 @@ body {
   padding-right: 20px;
 }
 
+#animeSongs .card {
+  height: 100%;
+}
+
 @media only screen and (max-width: 767px) {
   #main-footer #photoCredits {
     border-bottom: 2px solid #fff;
