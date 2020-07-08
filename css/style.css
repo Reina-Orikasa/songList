@@ -55,15 +55,25 @@ body {
   background-repeat: no-repeat;
 }
 
+#nonAnimeSongs a {
+  color: white;
+  text-decoration: none;
+}
+
+#nonAnimeSongs a:hover {
+  text-decoration: underline;
+}
+
 #main-footer a {
   color: white;
 }
 
-#containerLinks {
+#footer-bottom {
   border-top: 2px #fff solid;
+  font-size: 13px;
 }
 
-#containerLinks a {
+#footer-bottom a {
   padding-right: 20px;
 }
 
@@ -93,7 +103,7 @@ body {
     font-size: 14px;
   }
 
-  #containerLinks a {
+  #footer-bottom a {
     display: block;
     padding-bottom: 10px;
   }
@@ -102,13 +112,18 @@ body {
     justify-content: center;
   }
 
-  #containerLinks {
+  #footer-bottom {
     text-align: center;
+    padding-left: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   #main-footer #footerLeft {
     padding-right: 3rem;
+  }
+
+  #footer-bottom {
+    text-align: right;
   }
 }
