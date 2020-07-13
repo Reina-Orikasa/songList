@@ -13,6 +13,10 @@ body {
   padding-right: 1.1rem;
 }
 
+#main-nav a {
+  font-size: 17.5px;
+}
+
 #animeSongs p,
 #nonAnimeSongs p {
   margin-bottom: 50px;
@@ -47,8 +51,8 @@ body {
 
 #nonAnimeSongs {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/hans-vivek-By96LAr-34o-unsplash.jpg);
-  min-height: 600px;
+    url(../img/hans-vivek-By96LAr-34o-unsplash.jpg) center center/cover;
+  min-height: 300px;
   position: relative;
   color: white;
   background-attachment: fixed;
@@ -99,6 +103,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  #main-nav a {
+    font-size: 14px;
+  }
+
   #main-footer {
     font-size: 14px;
   }
