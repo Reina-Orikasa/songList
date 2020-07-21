@@ -25,11 +25,12 @@ body {
 #animeSongs {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url(../img/jezael-melgoza-layMbSJ3YOE-unsplash.jpg);
+    url(../img/jezael-melgoza-layMbSJ3YOE-unsplash.jpg) center center/cover;
   min-height: 600px;
   color: black;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 #animeSongs .card:hover {
@@ -39,9 +40,13 @@ body {
 
 #header {
   position: relative;
-  background: url(../img/yucar-fotografik-cfR-V1QuEKw-unsplash.jpg);
-  min-height: 600px;
+  background: url(../img/cesar-couto-pC2xOplxsVs-unsplash.jpg) center
+    center/cover;
+  background-size: 100%;
+  min-height: 675px;
   color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card {
@@ -57,6 +62,7 @@ body {
   color: white;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #nonAnimeSongs a {
