@@ -60,6 +60,10 @@ body {
   height: 100%;
 }
 
+#header-content img {
+  background: transparent;
+}
+
 #header-content h4 {
   font-size: 1.7rem;
   margin-bottom: 1.7rem;
