@@ -67,17 +67,19 @@
     <div class="currently-on-repeat pb-5 pt-1" id="header">
       <div class="text-center mb-3 container" id="header-content">
         <h4 class="mt-3">
-          Currently on Repeat (<span id="month"></span> <span id="year"></span>)
+          Currently on Repeat for <span id="month"></span>
+          <span class="displayYear"></span>
         </h4>
 
-        <div class="display-row">
+        <div class="image-row">
           <img
           src=https://upload.wikimedia.org/wikipedia/en/f/f5/In_a_Tidal_Wave_of_Mystery_by_Capital_Cities_artwork.jpg
-          class="img-fluid mb-5 pr-4" alt="In A Tidal Wave of Mystery">
+          class="img-fluid mb-5 pr-4 img-1" alt="In A Tidal Wave of Mystery">
 
           <img
             src="https://upload.wikimedia.org/wikipedia/en/e/ee/Capital-Cities-Safe-and-Sound.jpg"
             alt="Safe and Sound Album"
+            class="img-fluid img-2"
           />
         </div>
 
@@ -432,7 +434,7 @@
             target="_blank"
             rel="noopener"
           >
-            <span id="displayYear"></span>
+            <span class="displayYear"></span>
           </a>
         </div>
       </div>
@@ -456,27 +458,16 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Get month and year
-      var monthNames = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ];
+      const d = new Date();
+      const month = d.toLocaleString('default', { month: 'long' });
+      const year = d.toLocaleString('default', { year: 'numeric' });
+      console.log(month, year);
 
-      var d = new Date();
+      let dates = document.querySelectorAll('.displayYear');
 
-      document.querySelector('#displayYear').innerHTML = d.getFullYear();
-      $('#month').text(monthNames[d.getMonth()]);
-      $('#year').text(new Date().getFullYear());
+      dates.forEach(function (text) {
+        text.textContent = `${month} ${year}`;
+      });
 
       $('body').scrollspy({ target: '#main-nav' });
 
